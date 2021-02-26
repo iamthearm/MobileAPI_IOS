@@ -289,6 +289,7 @@
 		8DD06EA41CCA01AC8B9F9C24E2187514 /* Pods-BPContactCenter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DFCE9A5424B553D4C1D5CA229E511B8B /* Pods-BPContactCenter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E1869C425E869980061F564 /* ChatSessionTypingDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1869C325E869980061F564 /* ChatSessionTypingDto.swift */; };
 		8E1869D325E86A150061F564 /* ChatSessionNotTyping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1869D225E86A150061F564 /* ChatSessionNotTyping.swift */; };
+		8E186A4725E890CC0061F564 /* ChatSessionLocationDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E186A4625E890CC0061F564 /* ChatSessionLocationDto.swift */; };
 		8E5BF367B177BB522178BE899CE632E0 /* GULNetworkConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = A683F8B4F448FB6292830D9CD8B52E34 /* GULNetworkConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EC40DF347674ACFB64136D552A57816 /* ChatSessionMessageReadDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE3A326E16B2E0A7F0797551CE86718 /* ChatSessionMessageReadDto.swift */; };
 		8F2401711372633E3E26F3ED25CA2EDE /* FIRAnalyticsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811D4AA3394B76AFCB37A8D0E30145A /* FIRAnalyticsConfiguration.m */; };
@@ -1075,6 +1076,7 @@
 		8D9336229EF3ADB499AD7F59F2D605D5 /* URLSession+NetworkSessionServiceable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "URLSession+NetworkSessionServiceable.swift"; sourceTree = "<group>"; };
 		8E1869C325E869980061F564 /* ChatSessionTypingDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSessionTypingDto.swift; sourceTree = "<group>"; };
 		8E1869D225E86A150061F564 /* ChatSessionNotTyping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSessionNotTyping.swift; sourceTree = "<group>"; };
+		8E186A4625E890CC0061F564 /* ChatSessionLocationDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSessionLocationDto.swift; sourceTree = "<group>"; };
 		8E23B6793CD33AF47484007B973973A4 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_common.c; sourceTree = "<group>"; };
 		8EC2DF8139F51D40FB987F5FE346271B /* GDTCORTargets.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORTargets.h; path = GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORTargets.h; sourceTree = "<group>"; };
 		8F0B2373B0739B63B37E1EE9551FB539 /* FIRInstanceIDCheckinPreferences.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDCheckinPreferences.h; path = Firebase/InstanceID/Private/FIRInstanceIDCheckinPreferences.h; sourceTree = "<group>"; };
@@ -1488,6 +1490,7 @@
 				127932E8C2F6E9B443C4520255478C14 /* ContactCenterEventTypeDto.swift */,
 				8E1869C325E869980061F564 /* ChatSessionTypingDto.swift */,
 				8E1869D225E86A150061F564 /* ChatSessionNotTyping.swift */,
+				8E186A4625E890CC0061F564 /* ChatSessionLocationDto.swift */,
 			);
 			path = HttpResponseDto;
 			sourceTree = "<group>";
@@ -3094,6 +3097,7 @@
 				35D38A2FB1DBCEBC1972EAE154B27A73 /* BPContactCenter-dummy.m in Sources */,
 				44AE75E28239FD1A879C62395281B013 /* ChatSessionDisconnectDto.swift in Sources */,
 				C339B2B6F002ADCE39743FE427D4DE35 /* ChatSessionEndDto.swift in Sources */,
+				8E186A4725E890CC0061F564 /* ChatSessionLocationDto.swift in Sources */,
 				29896E81A2BAABF70D52052F4103DFE4 /* ChatSessionEndedDto.swift in Sources */,
 				41234DC17A8DE74B939E6842CA4F1137 /* ChatSessionInactivityTimeoutDto.swift in Sources */,
 				F7F640348D23F80EC7B8090D338B9A90 /* ChatSessionMessageDeliveredDto.swift in Sources */,
