@@ -290,7 +290,10 @@
 		8E1869C425E869980061F564 /* ChatSessionTypingDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1869C325E869980061F564 /* ChatSessionTypingDto.swift */; };
 		8E1869D325E86A150061F564 /* ChatSessionNotTyping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1869D225E86A150061F564 /* ChatSessionNotTyping.swift */; };
 		8E186A4725E890CC0061F564 /* ChatSessionLocationDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E186A4625E890CC0061F564 /* ChatSessionLocationDto.swift */; };
+		8E186A9D25E9BB6C0061F564 /* ChatSessionCaseHistoryDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E186A9C25E9BB6C0061F564 /* ChatSessionCaseHistoryDto.swift */; };
+		8E186AAC25E9C2FE0061F564 /* ContactCenterCaseHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E186AAB25E9C2FE0061F564 /* ContactCenterCaseHistory.swift */; };
 		8E5BF367B177BB522178BE899CE632E0 /* GULNetworkConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = A683F8B4F448FB6292830D9CD8B52E34 /* GULNetworkConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E98CD0E25EDA03E0060158F /* ChatSessionCaseSetDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E98CD0D25EDA03E0060158F /* ChatSessionCaseSetDto.swift */; };
 		8EC40DF347674ACFB64136D552A57816 /* ChatSessionMessageReadDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE3A326E16B2E0A7F0797551CE86718 /* ChatSessionMessageReadDto.swift */; };
 		8F2401711372633E3E26F3ED25CA2EDE /* FIRAnalyticsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2811D4AA3394B76AFCB37A8D0E30145A /* FIRAnalyticsConfiguration.m */; };
 		8F4156CD6065DA92152219DEB2004F5D /* FIRInstanceID+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A4A98AA063F56DB0C1F5D444B6BB287 /* FIRInstanceID+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -1077,7 +1080,10 @@
 		8E1869C325E869980061F564 /* ChatSessionTypingDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSessionTypingDto.swift; sourceTree = "<group>"; };
 		8E1869D225E86A150061F564 /* ChatSessionNotTyping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSessionNotTyping.swift; sourceTree = "<group>"; };
 		8E186A4625E890CC0061F564 /* ChatSessionLocationDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSessionLocationDto.swift; sourceTree = "<group>"; };
+		8E186A9C25E9BB6C0061F564 /* ChatSessionCaseHistoryDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSessionCaseHistoryDto.swift; sourceTree = "<group>"; };
+		8E186AAB25E9C2FE0061F564 /* ContactCenterCaseHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCenterCaseHistory.swift; sourceTree = "<group>"; };
 		8E23B6793CD33AF47484007B973973A4 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_common.c; sourceTree = "<group>"; };
+		8E98CD0D25EDA03E0060158F /* ChatSessionCaseSetDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSessionCaseSetDto.swift; sourceTree = "<group>"; };
 		8EC2DF8139F51D40FB987F5FE346271B /* GDTCORTargets.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDTCORTargets.h; path = GoogleDataTransport/GDTCORLibrary/Public/GoogleDataTransport/GDTCORTargets.h; sourceTree = "<group>"; };
 		8F0B2373B0739B63B37E1EE9551FB539 /* FIRInstanceIDCheckinPreferences.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceIDCheckinPreferences.h; path = Firebase/InstanceID/Private/FIRInstanceIDCheckinPreferences.h; sourceTree = "<group>"; };
 		8F9E301458771DCEE8AF9FE6D0288067 /* FIRInstanceIDUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRInstanceIDUtilities.m; path = Firebase/InstanceID/FIRInstanceIDUtilities.m; sourceTree = "<group>"; };
@@ -1491,6 +1497,7 @@
 				8E1869C325E869980061F564 /* ChatSessionTypingDto.swift */,
 				8E1869D225E86A150061F564 /* ChatSessionNotTyping.swift */,
 				8E186A4625E890CC0061F564 /* ChatSessionLocationDto.swift */,
+				8E98CD0D25EDA03E0060158F /* ChatSessionCaseSetDto.swift */,
 			);
 			path = HttpResponseDto;
 			sourceTree = "<group>";
@@ -2036,6 +2043,7 @@
 				E831B625D91EBE276C03808DE4E711FC /* ContactCenterChatSessionProperties.swift */,
 				65B5CCAC1FE5EE7A16DBAFD4D4113B78 /* ContactCenterChatSessionProperties+Dto.swift */,
 				FB6C74BBF97C6E7A5ABC80D15A5457B9 /* ContactCenterServiceAvailability.swift */,
+				8E186AAB25E9C2FE0061F564 /* ContactCenterCaseHistory.swift */,
 				B807CF61A711AA35C15EFF20D36D4FB4 /* Event */,
 				B588237B0FEA31FFE5262680FB642FC6 /* HttpRequestParameters */,
 				E7616E7FE29EE77990E65ED743CE7FF8 /* HttpResponseDto */,
@@ -2203,6 +2211,7 @@
 			isa = PBXGroup;
 			children = (
 				DD8868309C0B0D2ABA4B3FEE18C1FB82 /* ChatSessionPropertiesDto.swift */,
+				8E186A9C25E9BB6C0061F564 /* ChatSessionCaseHistoryDto.swift */,
 			);
 			path = HttpResponseDto;
 			sourceTree = "<group>";
@@ -3105,6 +3114,8 @@
 				8EC40DF347674ACFB64136D552A57816 /* ChatSessionMessageReadDto.swift in Sources */,
 				4933D50100305EF6FEAE2C63423E9893 /* ChatSessionPartyJoinedDto.swift in Sources */,
 				B140BAFA2E61E520D7245668B2649A7F /* ChatSessionPartyLeftDto.swift in Sources */,
+				8E186A9D25E9BB6C0061F564 /* ChatSessionCaseHistoryDto.swift in Sources */,
+				8E186AAC25E9C2FE0061F564 /* ContactCenterCaseHistory.swift in Sources */,
 				5737F459060023D758A7E888CFDAECEE /* ChatSessionPropertiesDto.swift in Sources */,
 				7FE8B9305E9B193F88885426C4340DE4 /* ChatSessionStatusDto.swift in Sources */,
 				92516AA18C0BA8F52B44005DA77FA401 /* ChatSessionTimeoutWarningDto.swift in Sources */,
@@ -3121,6 +3132,7 @@
 				D3D96E508942F229D865B8E993F3B390 /* ContactCenterEventsContainerDto.swift in Sources */,
 				517B18E0D10A3199C903F01B7C535C9F /* ContactCenterEventTypeDto.swift in Sources */,
 				6B86B750E687D021D75F21BC36EFA428 /* ContactCenterServiceAvailability.swift in Sources */,
+				8E98CD0E25EDA03E0060158F /* ChatSessionCaseSetDto.swift in Sources */,
 				B17AB1C4AAFD7032EFFB744E503485EC /* Encodable+Extension.swift in Sources */,
 				E15E01D6A6CEBA49E37633CD1FA91CF3 /* HttpHeaderFields.swift in Sources */,
 				8CA1C1CF29A6B05532B4278792952733 /* HttpRequestDefaultParameters.swift in Sources */,
