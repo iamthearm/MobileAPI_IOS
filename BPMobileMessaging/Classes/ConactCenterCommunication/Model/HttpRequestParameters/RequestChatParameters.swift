@@ -41,6 +41,9 @@ struct RequestChatParameters: Encodable {
         case phoneNumber = "phone_number"
         case from
         case parameters
+    }
+    
+    enum UserPlatformKeys: String, CodingKey {
         case userPlatform = "user_platform"
     }
     
@@ -51,8 +54,12 @@ struct RequestChatParameters: Encodable {
             try container.encode(phoneNumber, forKey: .phoneNumber)
         }
         try container.encode(from, forKey: .from)
-        try container.encode(parameters, forKey: .parameters)
-        var parameters = container.nestedContainer(keyedBy: CodingKeys.self, forKey: .parameters)
-        try parameters.encode(userPlatform, forKey: .userPlatform)
+        
+        let parametersEncoder = container.superEncoder(forKey: .parameters)
+        try self.parameters.encode(to: parametersEncoder)
+        
+        var platformContainer = parametersEncoder.container(keyedBy: UserPlatformKeys.self)
+        let platformEncoder = platformContainer.superEncoder(forKey: .userPlatform)
+        try userPlatform.encode(to: platformEncoder)
     }
 }
