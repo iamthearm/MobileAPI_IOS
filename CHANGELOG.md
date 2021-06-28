@@ -6,6 +6,7 @@ The changelog for `BPMobileMessaging`. Also see the [releases](https://github.co
 
 ### Fixed
 - Cache control header added to avoid caching of the poll requests by the HTTP proxy
+- [Issue 43](https://github.com/ServicePattern/MobileAPI_IOS/issues/43): checkAvailability serialization exception if service not available
 
 ### Added
 
