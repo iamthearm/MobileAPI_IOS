@@ -10,7 +10,7 @@ public enum ContactCenterServiceChatAvailability: String, Decodable {
     /// Chat service is available; application may request new chat sessions
     case available
     /// Chat service unavailable; application should not request new chat sessions
-    case unavailable
+    case unavailable = "notAvailable"
 }
 
 /// Describes chat service status.
