@@ -8,6 +8,7 @@
 
 import UIKit
 import BPMobileMessaging
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         registerDefaultsFromSettingsBundle()
-
+        
         guard let baseURL = baseURL,
               let tenantURL = tenantURL,
               let appID = appID,
@@ -76,7 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = navigationController
 
         self.window?.makeKeyAndVisible()
-
+        
         return true
     }
 

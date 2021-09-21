@@ -42,7 +42,7 @@ class ContactCenterTests: XCTestCase {
 
     func testEventsEncoding() {
         do {
-            let eventsContainer = ContactCenterEventsContainerDto(events: [.chatSessionEnd, .chatSessionDisconnect, .chatSessionInactivityTimeout(message: "123123", timestamp: Date()), .chatSessionMessage(messageID: "sdsdfsdf", partyID: "2342342", message: "sfdsfsf", timestamp: Date()),
+            let eventsContainer = ContactCenterEventsContainerDto(events: [.chatSessionEnd, .chatSessionDisconnect, .chatSessionInactivityTimeout(message: "123123", timestamp: Date()), .chatSessionMessage(messageID: "sdsdfsdf", partyID: "2342342", message: "123<br>456", messageText:"123\n456", timestamp: Date()),
                                                                            .chatSessionLocation(partyID: "111", url: "urkl1", latitude: 123.456, longitude: 321.654, timestamp: Date())])
             let encodedEventsContainer = try jsonEncoder.encode(eventsContainer)
             print("\(String(decoding: encodedEventsContainer, as: UTF8.self))")

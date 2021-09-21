@@ -38,7 +38,7 @@ public final class ContactCenterCommunicator: ContactCenterCommunicating {
         }
         return bundleIdentifier
     }
-
+    
     /// This method is not exposed to the consumer and it might be used to inject dependencies for unit testing
     init(baseURL: URL, tenantURL: URL, appID: String, clientID: String, networkService: NetworkServiceable, pollRequestService: PollRequestServiceable) {
 
@@ -186,14 +186,27 @@ public final class ContactCenterCommunicator: ContactCenterCommunicating {
     private func messageIdentifier() -> String {
         "\(UUID()):\(messageNumber)"
     }
-
-    public func sendChatMessage(chatID: String, message: String, with completion: @escaping (Result<String, Error>) -> Void) {
+    
+    public func sendChatMessage(chatID: String, message: String, format: ContentFormat, with completion: @escaping (Result<String, Error>) -> Void) {
         let messageID = messageIdentifier()
         do {
+            var html = "";
+            var text = "";
+            
+            switch format {
+            case .Text:
+                text = message
+                let tmp = message as NSString
+                html = tmp.replacingOccurrences(of: "\n", with: "<br>")
+            case .Html:
+                html = message;
+            }
+            
             let urlRequest = try httpSendEventsPostRequest(chatID: chatID,
                                                            events: [.chatSessionMessage(messageID: messageID,
                                                                                         partyID: nil,
-                                                                                        message: message,
+                                                                                        message: html,
+                                                                                        messageText: text,
                                                                                         timestamp: nil)])
             networkService.dataTask(using: urlRequest) { [weak self] (response: NetworkDataResponse) in
                 switch response {
