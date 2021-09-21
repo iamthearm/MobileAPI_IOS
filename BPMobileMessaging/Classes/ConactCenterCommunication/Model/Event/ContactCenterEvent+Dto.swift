@@ -23,10 +23,12 @@ extension ContactCenterEvent {
         case .chatSessionMessage(messageID: let messageID,
                                  partyID: let partyID,
                                  message: let message,
+                                 messageText: let messageText,
                                  timestamp: let timestamp):
             return ChatSessionMessageDto(messageID: messageID,
                                          partyID: partyID,
                                          message: message,
+                                         messageText: messageText,
                                          timestamp: timestamp)
         case .chatSessionMessageDelivered(messageID: let messageID,
                                           partyID: let partyID,

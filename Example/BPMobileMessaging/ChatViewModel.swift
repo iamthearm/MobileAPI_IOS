@@ -106,7 +106,8 @@ class ChatViewModel {
             for text in messageTexts {
                 dipatchGroup.enter()
                 self?.service.contactCenterService.sendChatMessage(chatID: chatID,
-                                                             message: text) { result in
+                                                             message: text,
+                                                             format: ContentFormat.Text) { result in
                     switch result {
                     case .success(let messageID):
                         messages.append(ChatMessage(text: text,
@@ -243,13 +244,13 @@ extension ChatViewModel {
                                             user: self.getParty(partyID: partyID),
                                             messageId: "",
                                             date: timestamp))
-            case .chatSessionMessage(let messageID, let partyID, let message, let timestamp):
-                print("\(timestamp): message: \(message) from party \(partyID)")
+            case .chatSessionMessage(let messageID, let partyID, let message, let messageText, let timestamp):
+                print("\(timestamp): message text: \(messageText), message HTML: \(message) from party \(partyID)")
                 guard let partyID = partyID, let timestamp = timestamp, let messageID = messageID else {
                     print("partyID or timestamp empty")
                     return
                 }
-                messages.append(ChatMessage(text: message,
+                messages.append(ChatMessage(text: messageText ?? message,
                                             user: self.getParty(partyID: partyID),
                                             messageId: messageID,
                                             date: timestamp))
@@ -350,7 +351,7 @@ extension ChatViewModel {
     }
 
     private func sendChatMessage(chatID: String, message: String) {
-        service.contactCenterService.sendChatMessage(chatID: chatID, message: "Hello") { chatMessageResult in
+        service.contactCenterService.sendChatMessage(chatID: chatID, message: "Hello", format: ContentFormat.Html) { chatMessageResult in
             switch chatMessageResult {
             case .success(let messageID):
                 print("MessageID: \(messageID)")

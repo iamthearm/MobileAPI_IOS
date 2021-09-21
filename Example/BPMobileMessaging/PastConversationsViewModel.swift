@@ -61,7 +61,7 @@ class PastConversationsViewModel {
                                                 user: user,
                                                 messageId: "",
                                                 date: timestamp))
-                case .chatSessionMessage(let messageID, let partyID, let message, let timestamp):
+                case .chatSessionMessage(let messageID, let partyID, let message, let messageText, let timestamp):
                     guard let partyID = partyID else {
                         print("partyID empty")
                         return

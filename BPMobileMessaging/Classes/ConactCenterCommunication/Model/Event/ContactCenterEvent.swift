@@ -33,7 +33,7 @@ public enum ContactCenterEvent {
     ///   - partyID: a unique ID of the party who sent the message. Agent parties are reported by `chatSessionPartyJoined` event. Client party ID always matches the chat ID.
     ///   - message: message content
     ///   - timestamp: Timestamp of the event
-    case chatSessionMessage(messageID: String?, partyID: String?, message: String, timestamp: Date?)
+    case chatSessionMessage(messageID: String?, partyID: String?, message: String, messageText: String?, timestamp: Date?)
     /// Indicates that a message has been delivered to each party.
     /// Direction: S<->C
     /// - Parameters:
