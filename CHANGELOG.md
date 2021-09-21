@@ -2,13 +2,6 @@
 
 The changelog for `BPMobileMessaging`. Also see the [releases](https://github.com/ServicePattern/MobileAPI_IOS/releases) on GitHub.
 
-## [0.1.7](https://github.com/ServicePattern/MobileAPI_IOS/releases/tag/0.1.7)
-
-### Added
-
- - To sync with Android SDK, the text chat message content added to the chatSessionMessage event (text content is created from HTML content by the server) and 'format' parameter (text or HTML) added to the sendChatMessage request. Android SDK issue #38.
-
-
 ## [0.1.6](https://github.com/ServicePattern/MobileAPI_IOS/releases/tag/0.1.6)
 
 ### Fixed
@@ -19,6 +12,7 @@ The changelog for `BPMobileMessaging`. Also see the [releases](https://github.co
 
  - Debug logging of the HTTP traffic, including HTTP headers
  - Client device information in requestChat()
+ - To sync with Android SDK, the text chat message content added to the chatSessionMessage event (text content is created from HTML content by the server) and 'format' parameter (text or HTML) added to the sendChatMessage request. Android SDK issue #38.
 
 
 ## [0.1.5](https://github.com/ServicePattern/MobileAPI_IOS/releases/tag/0.1.5)
