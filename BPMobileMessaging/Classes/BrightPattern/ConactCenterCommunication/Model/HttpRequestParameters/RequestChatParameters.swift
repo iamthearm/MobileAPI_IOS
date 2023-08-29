@@ -3,6 +3,7 @@
     
 
 import Foundation
+import UIKit
 
 /// - Tag: RequestChatParameters
 struct RequestChatParameters: Encodable {

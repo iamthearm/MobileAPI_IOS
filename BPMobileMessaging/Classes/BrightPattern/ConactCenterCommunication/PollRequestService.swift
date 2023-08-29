@@ -3,6 +3,7 @@
     
 
 import Foundation
+import UIKit
 
 protocol PollRequestServiceable {
     var delegate: ContactCenterEventsDelegating? { get set }
